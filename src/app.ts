@@ -61,9 +61,9 @@ function displayResults(startTime: number) {
     console.log(`Average request duration: ${avgDuration.toFixed(2)} ms`);
 
     const totalTimeInSeconds = (endTime - startTime) / 1000;
-    const requestsPerMinute = successfulRequests.length / totalTimeInSeconds * 60;
+    const requestsPerMinute = (results.length / totalTimeInSeconds) * 60;
 
-    console.log(`Requests per second: ${requestsPerMinute.toFixed(2)}`);
+    console.log(`Requests per minute: ${requestsPerMinute.toFixed(2)}`);
 }
 
 (async () => {
